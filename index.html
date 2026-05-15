@@ -17,6 +17,7 @@
         h2 { color: #333; margin-top: 2em; }
         a { color: #2196F3; }
         .last-updated { color: #888; font-size: 0.9em; }
+        footer { margin-top: 3em; padding-top: 1em; border-top: 1px solid #eee; color: #888; font-size: 0.9em; }
     </style>
 </head>
 <body>
@@ -24,15 +25,16 @@
     <p class="last-updated">Last updated: May 2026</p>
 
     <p>
-        ScriptLens is a browser extension that visualizes dependencies between ServiceNow Script Includes
-        and other ServiceNow artifacts. This policy explains what data the extension accesses and how it is used.
+        ScriptLens is a browser extension developed by <strong>Apollo Software, LLC</strong> that visualizes
+        dependencies between ServiceNow Script Includes and other ServiceNow artifacts. This policy explains
+        what data the extension accesses and how it is used.
     </p>
 
     <h2>Data We Access</h2>
     <p>ScriptLens accesses the following data solely to provide its core functionality:</p>
     <ul>
         <li><strong>ServiceNow page content:</strong> When you navigate to a Script Include page, the extension reads the script name and script body from the page.</li>
-        <li><strong>ServiceNow session token (g_ck):</strong> The extension reads your active session token from the ServiceNow page to authenticate API requests on your behalf. This token is never stored persistently and is only held in memory for the duration of the visualization session.</li>
+        <li><strong>ServiceNow session token (g_ck):</strong> The extension reads your active browser session token from the ServiceNow page to authenticate API requests on your behalf. This token is never stored persistently and is only held in memory for the duration of the visualization session. Your passwords and login credentials are never accessed or stored.</li>
         <li><strong>ServiceNow REST API:</strong> The extension makes authenticated requests to your ServiceNow instance's REST API to retrieve dependent Script Include records needed to build the dependency graph.</li>
     </ul>
 
@@ -42,6 +44,7 @@
         <li>We do not track your browsing activity.</li>
         <li>We do not collect personally identifiable information.</li>
         <li>We do not use analytics or advertising services.</li>
+        <li>We do not access, store, or transmit your passwords or login credentials.</li>
         <li>All data accessed by the extension stays within your browser and your ServiceNow instance.</li>
     </ul>
 
@@ -67,9 +70,9 @@
 
     <h2>Changes to This Policy</h2>
     <p>
-        We may update this privacy policy as the extension's features evolve. The "Last updated" date at the
-        top of this page will reflect any changes. Continued use of the extension after changes are posted
-        constitutes acceptance of the updated policy.
+        Apollo Software, LLC may update this privacy policy as the extension's features evolve. The "Last updated"
+        date at the top of this page will reflect any changes. Continued use of the extension after changes
+        are posted constitutes acceptance of the updated policy.
     </p>
 
     <h2>Contact</h2>
@@ -77,5 +80,9 @@
         If you have any questions about this privacy policy or ScriptLens, please open an issue on the
         <a href="https://github.com/long5001/ScriptLens" target="_blank">ScriptLens GitHub repository</a>.
     </p>
+
+    <footer>
+        &copy; 2026 Apollo Software, LLC. All rights reserved.
+    </footer>
 </body>
 </html>
