@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScriptLens Privacy Policy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+            color: #333;
+            line-height: 1.7;
+        }
+        h1 { color: #1a1a2e; }
+        h2 { color: #333; margin-top: 2em; }
+        a { color: #2196F3; }
+        .last-updated { color: #888; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+    <h1>ScriptLens Privacy Policy</h1>
+    <p class="last-updated">Last updated: May 2026</p>
+
+    <p>
+        ScriptLens is a browser extension that visualizes dependencies between ServiceNow Script Includes
+        and other ServiceNow artifacts. This policy explains what data the extension accesses and how it is used.
+    </p>
+
+    <h2>Data We Access</h2>
+    <p>ScriptLens accesses the following data solely to provide its core functionality:</p>
+    <ul>
+        <li><strong>ServiceNow page content:</strong> When you navigate to a Script Include page, the extension reads the script name and script body from the page.</li>
+        <li><strong>ServiceNow session token (g_ck):</strong> The extension reads your active session token from the ServiceNow page to authenticate API requests on your behalf. This token is never stored persistently and is only held in memory for the duration of the visualization session.</li>
+        <li><strong>ServiceNow REST API:</strong> The extension makes authenticated requests to your ServiceNow instance's REST API to retrieve dependent Script Include records needed to build the dependency graph.</li>
+    </ul>
+
+    <h2>Data We Do Not Collect</h2>
+    <ul>
+        <li>We do not collect, transmit, or store any data on external servers.</li>
+        <li>We do not track your browsing activity.</li>
+        <li>We do not collect personally identifiable information.</li>
+        <li>We do not use analytics or advertising services.</li>
+        <li>All data accessed by the extension stays within your browser and your ServiceNow instance.</li>
+    </ul>
+
+    <h2>Permissions</h2>
+    <p>ScriptLens requests the following browser permissions:</p>
+    <ul>
+        <li><strong>activeTab / tabs:</strong> To detect when you are on a ServiceNow Script Include page and to open the visualization tab.</li>
+        <li><strong>scripting:</strong> To inject the content script that reads the script body from the ServiceNow page.</li>
+        <li><strong>host_permissions (*://*.service-now.com/*):</strong> To make authenticated API requests to your ServiceNow instance to fetch dependent Script Include records.</li>
+    </ul>
+
+    <h2>Data Retention</h2>
+    <p>
+        ScriptLens does not persist any data between browser sessions. All visualization data is held in
+        the extension's background service worker memory and is cleared when the browser or extension is restarted.
+    </p>
+
+    <h2>Third-Party Services</h2>
+    <p>
+        ScriptLens does not integrate with or send data to any third-party services.
+        The only external communication is between your browser and your own ServiceNow instance.
+    </p>
+
+    <h2>Changes to This Policy</h2>
+    <p>
+        We may update this privacy policy as the extension's features evolve. The "Last updated" date at the
+        top of this page will reflect any changes. Continued use of the extension after changes are posted
+        constitutes acceptance of the updated policy.
+    </p>
+
+    <h2>Contact</h2>
+    <p>
+        If you have any questions about this privacy policy or ScriptLens, please open an issue on the
+        <a href="https://github.com/long5001/ScriptLens" target="_blank">ScriptLens GitHub repository</a>.
+    </p>
+</body>
+</html>
